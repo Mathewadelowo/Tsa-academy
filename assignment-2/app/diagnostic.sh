@@ -90,7 +90,7 @@ help)
     exit 0
     ;;
 
-    *)
+*)
     echo "Invalid command. Use 'diagnostic.sh help' for usage information."
     show_help
     exit 1
