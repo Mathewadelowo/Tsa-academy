@@ -70,7 +70,7 @@ disk)
 
 network)
     HOST=$2
-    if [ -z "$HOST"]; then 
+    if [ -z "$HOST" ]; then 
          echo "Error: Target host is required" >&2 
          exit 2
     fi
