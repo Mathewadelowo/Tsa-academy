@@ -44,10 +44,18 @@ system)
     ;;
 disk)
     THRESHOLD=$2
-    if  [[  -z "$THRESHOLD" ]] || ! [[ "$THRESHOLD" =~ ^[0-9]+$ ]]; then
-        echo "Error: Threshold must be a number between 1 and 100." >&2
+    if  [  -z "$THRESHOLD" ]; then
+        echo "Error: Threshold is required. Please provide a value between 1 and 100." >&2
         exit 2
     fi
+
+    case "$THRESHOLD" in
+    ''|*[!0-9]*)
+        echo "Error: Threshold must be a number between 1 and 100." >&2
+        exit 2
+        ;;
+    esac
+
     if [ "$THRESHOLD" -lt 1 ] || [ "$THRESHOLD" -gt 100 ]; then
         echo "Threshold must be between the range of 1-100" >&2
         exit 2
