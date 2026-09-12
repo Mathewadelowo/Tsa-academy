@@ -9,7 +9,7 @@ show_help() {
     echo "Usage: diagnostic.sh <command> [options]"
     echo ""
     echo "Commands:"
-    echo "  system           Display system metrics (CPU, Memory, Hostname)"
+    echo "  system_info           Display system metrics (CPU, Memory, Hostname)"
     echo "  disk <threshold> Check disk usage against percentage threshold (1-100)"
     echo "  network <host>   Check host connectivity and ping"
     echo "  help             Display this help message"
@@ -19,7 +19,7 @@ COMMAND=$1
 
 case "$COMMAND" in
 
-system)
+system_info)
     echo "System Metrics:"
     echo "Hostname: $(hostname)"
     echo "Uptime: $(uptime -p)"
