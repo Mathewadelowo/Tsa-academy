@@ -12,7 +12,7 @@ A lightweight Alpine-based container image providing a unified command-line diag
 To build the Docker image locally, run the following command from your project root:
 
 ```bash
-docker build -t diagnostic .
+docker build -t diagnostic-tool .
 ```
 
 ## Commands Supported
@@ -40,9 +40,10 @@ Check host connectivity, perform ping tests, or verify open TCP ports:
 ```bash
 # Basic host ping check
 docker run --rm diagnostic-tool network google.com
+```
 
 
-## Persistent Logging
+# Persistent Logging
 By default, the container destroys runtime logs when it exits due to the `--rm` flag. To save the diagnostic logs directly to your local machine's `logs/` directory, mount a local volume:
 
 ```bash
