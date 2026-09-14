@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-echo "Building Docker image..."
+cd "$(dirname "$0")/.."
 
+echo "Building Docker image..."
 docker build -t devops-tool .
 
 echo "Running Docker smoke tests..."
@@ -13,8 +14,10 @@ echo "Test 2: system-info"
 docker run --rm devops-tool system-info
 
 echo "Test 3: invalid command"
+set +e
 docker run --rm devops-tool banana
 exit_code=$?
+set -e
 
 if [[ "$exit_code" -eq 2 ]]; then
     echo "PASS: invalid command returned exit code 2"
