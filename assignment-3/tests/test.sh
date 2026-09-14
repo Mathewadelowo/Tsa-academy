@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-APP="./app/app.sh"
+# cd "$(dirname "$0")/.."
+
+APP="assignment-3/app/app.sh"
 
 passed=0
 failed=0

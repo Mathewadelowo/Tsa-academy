@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+cd "$(dirname "$0")/.."
 
 required_files=(
     "README.md"
@@ -6,7 +7,7 @@ required_files=(
     "scripts/lint.sh"
     "scripts/build.sh"
     "tests/test.sh"
-    ".github/workflows/ci.yml"
+    "../.github/workflows/ci.yml"
     "Dockerfile"
     "compose.yaml"
     ".dockerignore"
