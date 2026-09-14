@@ -75,6 +75,7 @@ disk)
 
 network)
     HOST=$2
+    PORT=$3
 
     if [[ -z "$HOST" ]]; then
         echo "Error: Target host is required." >&2

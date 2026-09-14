@@ -142,7 +142,7 @@ fi
 echo
 echo "Testing port 65536..."
 
-"$APP" check-port google.com 65536
+"$APP" check-port example.com 65536
 exit_code=$?
 
 if [[ "$exit_code" -eq 2 ]]; then
