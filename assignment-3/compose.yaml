@@ -1,0 +1,6 @@
+services:
+  diagnostic-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: diagnostic-app
