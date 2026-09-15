@@ -9,18 +9,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: bash assignments-3/scripts/lint.sh
+      - run: bash assignment-3/scripts/lint.sh
 
   test:
     needs: validate
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: bash  assignments-3/tests/test.sh
+      - run: bash assignment-3/tests/test.sh
 
   docker:
     needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: bash assignments-3/scripts/build.sh
+      - run: bash assignment-3/scripts/build.sh
